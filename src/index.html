@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 6 - DevOps</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #1f1c2c, #302b63, #24243e, #3a0ca3);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 750px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            background: linear-gradient(to right, #ff4ecd, #9d4edd);
+            background-clip: text;
+              -webkit-background-clip: text;
+               color: transparent;
+        }
+
+        .terminal-line {
+            margin: 10px 0;
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+        }
+
+        .check {
+            color: #ff4ecd;
+            font-weight: bold;
+        }
+
+        .status {
+            margin-top: 25px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: linear-gradient(to right, #ff4ecd, #9d4edd);
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Servidor Web Nginx con Docker </h1>
+
+        <div class="terminal-line">
+            <span class="check">✔</span> Construyendo contenedor Nginx...
+        </div>
+
+        <div class="terminal-line">
+            <span class="check">✔</span> Contenedor iniciado correctamente.
+        </div>
+
+        <div class="terminal-line">
+            <span class="check">✔</span> Puerto 8080 enlazado al puerto 80.
+        </div>
+
+        <div class="terminal-line">
+            <span class="check">✔</span> Volumen montado desde la carpeta ./src.
+        </div>
+
+        <div class="status">
+            NGINX EJECUTÁNDOSE EN DOCKER
+        </div>
+
+        <div class="footer">
+            Práctica 6 - Electiva 2 DevOps | Keren Guilamo | 2026
+        </div>
+    </div>
+</body>
+</html>
